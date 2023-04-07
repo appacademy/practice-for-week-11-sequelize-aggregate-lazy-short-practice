@@ -159,5 +159,13 @@ You are now able to write Sequelize queries to get common aggregate data values,
 calculate aggregate values in JavaScript, and display those values in your
 endpoints.
 
+## Submission
+
+Submit your work.
+
+1. Delete the `node_modules` folder in the __server__ directory
+2. Zip up the project folder
+3. Submit the zip file
+
 [Sequelize's aggregate built-in methods]: https://sequelize.org/docs/v7/core-concepts/model-querying-basics/#utility-methods
 [`toJSON()` Sequelize method]: https://sequelize.org/docs/v6/core-concepts/model-instances/#note-logging-instances

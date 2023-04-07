@@ -1,18 +1,13 @@
-const chai = require("chai");
-let chaiHttp = require("chai-http");
-let chaiJsonSchema = require('chai-json-schema');
-let server = require("../app");
-chai.use(chaiHttp);
-chai.use(chaiJsonSchema);
+const { setupBefore, setupChai, removeTestDB } = require('./utils/test-utils');
+const chai = setupChai();
 const expect = chai.expect;
-
-const { resetDB, seedAllDB } = require("./utils/test-utils");
+let chaiJsonSchema = require('chai-json-schema');
+chai.use(chaiJsonSchema);
 
 describe("Step #2 Specs", () => {
-  before(async function () {
-    await resetDB();
-    return seedAllDB();
-  });
+  let DB_TEST_FILE, SERVER_DB_TEST_FILE, models, server;
+  before(async () => ({ server, models, DB_TEST_FILE, SERVER_DB_TEST_FILE } = await setupBefore(__filename)));
+  after(async () => await removeTestDB(DB_TEST_FILE));
 
   describe("GET /cats/:catId", () => {
     it("GET /cats/7 returns the cat with an id of 7, its toys, and the count, total price, and avg price of its toys", async () => {

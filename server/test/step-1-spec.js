@@ -5,8 +5,8 @@ let chaiJsonSchema = require('chai-json-schema');
 chai.use(chaiJsonSchema);
 
 describe("Step #1 Specs", () => {
-  let DB_TEST_FILE, SERVER_DB_TEST_FILE, models, server;
-  before(async () => ({ server, models, DB_TEST_FILE, SERVER_DB_TEST_FILE } = await setupBefore(__filename)));
+  let DB_TEST_FILE, models, server;
+  before(async () => ({ server, models, DB_TEST_FILE } = await setupBefore(__filename)));
   after(async () => await removeTestDB(DB_TEST_FILE));
 
   describe("GET /toys-summary", () => {

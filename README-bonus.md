@@ -32,7 +32,8 @@ E. Return a JSON response with the toy, its associated cats, the count of cats
    associated with the toy, the count of orange cats associated with the toy,
    and the percentage of orange cats that the toy is associated.
 
-Run `npm test test/bonus/step-4-spec.js` to test this endpoint.
+Run `npm test test/bonus/step-4-spec.js` in the __server__ directory to test
+this endpoint.
 
 How many queries did you make to the database to get this data? (Hint: check
 your server logs.) What is the time complexity of your JavaScript code in this

@@ -23,6 +23,8 @@ Explore the models and their associations in the __db/models__ directory. The
 `Cat` and `Toy` models have a many-to-many relationship, and are joined by the
 `CatToy` model.
 
+`cd` into the __server__ folder.
+
 Start your development server using `npm run dev`.
 
 In this practice you will be implementing the endpoints in __app.js__ which will
@@ -52,7 +54,8 @@ values:
 
 - Set the `sumPrice` variable to evaluate to the sum of all of the toy prices
 
-Run `npm test test/step-1-spec.js` to test this endpoint.
+Run `npm test test/step-1-spec.js` in the __server__ directory to test this
+endpoint.
 
 You can also test that your endpoint returns the correct aggregate data values
 by navigating to the `/toys-summary` endpoint in your browser. If you
@@ -94,7 +97,8 @@ specifications below:
 - Set the `toyAvgPrice` variable to evaluate to the average price of all the
   toys that the cat is associated with
 
-Run `npm test test/step-2-spec.js` to test this endpoint.
+Run `npm test test/step-2-spec.js` in the __server__ directory to test this
+endpoint.
 
 You can also test that your endpoint returns the correct aggregate data values
 by navigating to the `/cats/7` endpoint. The JSON should look like this:
